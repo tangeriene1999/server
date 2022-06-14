@@ -60,6 +60,7 @@ public class SteamService {
 	public Boolean login(String username, String pwd){
 		repository.readData();
 		User u = repository.getUserObject(username);
+    
 		if (u!= null)
 			return u.getPassword().equals(pwd);
 		return false;

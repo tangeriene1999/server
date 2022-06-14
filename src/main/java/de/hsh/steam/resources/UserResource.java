@@ -64,7 +64,7 @@ public class UserResource {
     {
         boolean ok=steamService.newUser(user.getUsername(), user.getPassword());
         if (ok){
-            Message mg=new Message("created!");
+            Message mg=new Message("User "+user.getUsername()+" created!");
             System.out.print("New User: "+user.getUsername()+" created!");
             return Response.status(Response.Status.CREATED)
                     .entity(mg)

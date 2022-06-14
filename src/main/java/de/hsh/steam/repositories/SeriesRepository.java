@@ -52,7 +52,7 @@ public abstract class SeriesRepository  {
 	 */
 	public User getUserObject(String username) {
 		User user = null;
-                if(this.allUsers.isEmpty())
+                if(!this.allUsers.isEmpty())
 		for (User u : allUsers){
 			if (u.getUsername().equals(username) ) {
 				user = u;
